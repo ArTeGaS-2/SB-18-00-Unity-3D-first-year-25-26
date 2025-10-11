@@ -7,9 +7,37 @@ public class BaseClick : MonoBehaviour
 {
     public int clickCounter = 0; // Лічильник кілків
     public TextMeshProUGUI textObj; // Об'єкт тексту на сцені
+
+    private bool buttonPressStatus = false;
     private void OnMouseDown()
+    {
+        ClickButton();
+    }
+    private void OnMouseUp()
+    {
+        
+    }
+    private void ClickButton()
     {
         clickCounter++; // + 1 До значення лічильника
         textObj.text = "Монети: " + clickCounter.ToString();
+    }
+    private void ClickImpactEffect()
+    {
+        if (buttonPressStatus == false)
+        {
+            // Зміна позиції циліндра при натисканні
+            transform.localPosition = new Vector3(0, 0.3f, 0);
+            buttonPressStatus = true;
+        }
+    }
+    private void DisableClickImpactEffect()
+    {
+        if (buttonPressStatus == true)
+        {
+            // Зміна позиції циліндра при натисканні
+            transform.localPosition = new Vector3(0, 0.5f, 0);
+            buttonPressStatus = false;
+        }
     }
 }
