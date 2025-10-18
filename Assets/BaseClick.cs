@@ -12,10 +12,11 @@ public class BaseClick : MonoBehaviour
     private void OnMouseDown()
     {
         ClickButton();
+        ClickImpactEffect();
     }
     private void OnMouseUp()
     {
-        
+        DisableClickImpactEffect();
     }
     private void ClickButton()
     {
