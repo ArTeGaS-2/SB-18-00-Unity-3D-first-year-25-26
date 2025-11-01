@@ -5,10 +5,16 @@ using TMPro;
 
 public class BaseClick : MonoBehaviour
 {
-    public int clickCounter = 0; // Лічильник кілків
-    public TextMeshProUGUI textObj; // Об'єкт тексту на сцені
+    private int clickCounter; // Лічильник кілків
+    private TextMeshProUGUI textObj; // Об'єкт тексту на сцені
 
     private bool buttonPressStatus = false;
+    private void Start()
+    {
+        // Беремо значення з Economy
+        clickCounter = Economy.Instance.clickCounter;
+        textObj = Economy.Instance.clickCounterText;
+    }
     private void OnMouseDown()
     {
         ClickButton();
