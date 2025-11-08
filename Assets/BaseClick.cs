@@ -5,15 +5,16 @@ using TMPro;
 
 public class BaseClick : MonoBehaviour
 {
+    public static BaseClick Instance;
+
     private int clickCounter; // Лічильник кілків
-    private TextMeshProUGUI textObj; // Об'єкт тексту на сцені
+
+    private TextMeshProUGUI textObj; // Об'єкт тексту на сцені 
 
     private bool buttonPressStatus = false;
     private void Start()
     {
-        // Беремо значення з Economy
-        clickCounter = Economy.Instance.clickCounter;
-        textObj = Economy.Instance.clickCounterText;
+        Instance = this;
     }
     private void OnMouseDown()
     {
@@ -26,8 +27,8 @@ public class BaseClick : MonoBehaviour
     }
     private void ClickButton()
     {
-        clickCounter++; // + 1 До значення лічильника
-        textObj.text = "Монети: " + clickCounter.ToString();
+        Economy.Instance.clickCounter += Economy.Instance.coinsPerClick;
+        Economy.Instance.UpdateText();
     }
     private void ClickImpactEffect()
     {
