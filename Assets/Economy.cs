@@ -18,6 +18,7 @@ public class Economy : MonoBehaviour
     [Header("Текстові елементи")]
     public TextMeshProUGUI clickCounterText; // Об'єкт тексту на сцені
     public TextMeshProUGUI coinsPerClickText; // " X за клік"
+    public TextMeshProUGUI coinsPerClickPriceText; // Текст з ціною бонуса
 
     private void Start()
     {
@@ -26,6 +27,8 @@ public class Economy : MonoBehaviour
     public void UpdateText()
     {
         clickCounterText.text = "Монети: " + clickCounter.ToString();
+        coinsPerClickText.text = $"+ {coinsPerClick} за клік";
+        coinsPerClickPriceText.text = $"Ціна: {TakeCurrentPrice()}";
     }
     public float TakeCurrentPrice()
     {
