@@ -8,6 +8,7 @@ public class Economy : MonoBehaviour
     public static Economy Instance; // Сінглтон
 
     [Header("Лічильник")]
+    public string counterTextInObj = "Монети: ";
     public float clickCounter = 0f; // Лічильник кліків
     public float coinsPerClick = 1f; // Монет за клік
 
@@ -26,7 +27,7 @@ public class Economy : MonoBehaviour
     }
     public void UpdateText()
     {
-        clickCounterText.text = "Монети: " + clickCounter.ToString();
+        clickCounterText.text = counterTextInObj + clickCounter.ToString();
         coinsPerClickText.text = $"+ {coinsPerClick} за клік";
         coinsPerClickPriceText.text = $"Ціна: {TakeCurrentPrice()}";
     }

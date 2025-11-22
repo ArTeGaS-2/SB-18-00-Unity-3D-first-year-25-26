@@ -1268,7 +1268,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 100}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1086986621
 MonoBehaviour:
@@ -1450,7 +1450,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1551694565}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1643151110}
+        m_TargetAssemblyTypeName: BonusButton, Assembly-CSharp
+        m_MethodName: ClickBonusButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1551694565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1503,6 +1515,7 @@ GameObject:
   - component: {fileID: 1643151104}
   - component: {fileID: 1643151108}
   - component: {fileID: 1643151109}
+  - component: {fileID: 1643151110}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1624,6 +1637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d881bba9c6def4246a3a9c52083b464a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  counterTextInObj: "\u041C\u043E\u043D\u0435\u0442\u0438: "
   clickCounter: 0
   coinsPerClick: 1
   clickBonusPrice: 10
@@ -1631,6 +1645,18 @@ MonoBehaviour:
   clickCounterText: {fileID: 1086986621}
   coinsPerClickText: {fileID: 727325532}
   coinsPerClickPriceText: {fileID: 827642828}
+--- !u!114 &1643151110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643151103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 672efe5cd5f8e7b439214faa4d3d872e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1669963011
 GameObject:
   m_ObjectHideFlags: 0

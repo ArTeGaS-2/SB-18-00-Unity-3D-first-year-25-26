@@ -9,9 +9,11 @@ public class BonusButton : MonoBehaviour
         if (Economy.Instance.clickCounter >=
             Economy.Instance.TakeCurrentPrice())
         {
-            Economy.Instance.coinsPerClick++;
+           
             Economy.Instance.clickCounter -= 
                 Economy.Instance.TakeCurrentPrice();
+            Economy.Instance.coinsPerClick++;
+            Economy.Instance.UpdateText();
         }
     }
 }
