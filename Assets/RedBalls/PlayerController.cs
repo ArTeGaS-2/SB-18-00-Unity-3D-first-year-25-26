@@ -34,9 +34,18 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        // керування
         float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+
+        // беремо прискорення об'єкту
         Vector3 velocity = rb.velocity;
-        velocity.x = horizontal * moveSpeed;
+
+        // Прискорення в бік
+        velocity.x += horizontal * moveSpeed * Time.fixedDeltaTime;
+        velocity.z += vertical * moveSpeed * Time.fixedDeltaTime;
+
+        // повертаємо прискорення об'єкту
         rb.velocity = velocity;
     }
 }
