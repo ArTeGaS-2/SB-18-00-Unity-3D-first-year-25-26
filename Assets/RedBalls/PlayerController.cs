@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     Rigidbody rb;
     bool isGrounded;
 
+    public GameObject mainCamera;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -47,5 +49,12 @@ public class PlayerController : MonoBehaviour
 
         // повертаємо прискорення об'єкту
         rb.velocity = velocity;
+    }
+    private void LateUpdate()
+    {
+        mainCamera.transform.position = new Vector3(
+            transform.position.x,
+            transform.position.y + 5f,
+            transform.position.z - 10f);
     }
 }
