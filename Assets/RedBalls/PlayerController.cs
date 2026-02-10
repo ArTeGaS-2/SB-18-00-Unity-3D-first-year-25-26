@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour
 
         // повертаємо прискорення об'єкту
         rb.velocity = velocity;
+        IfPlayerFall();
     }
     private void LateUpdate()
     {
@@ -56,5 +58,12 @@ public class PlayerController : MonoBehaviour
             transform.position.x,
             transform.position.y + 5f,
             transform.position.z - 10f);
+    }
+    private void IfPlayerFall()
+    {
+        if (transform.position.y < -30f)
+        {
+            SceneManager.LoadScene("RedBall");
+        }
     }
 }
