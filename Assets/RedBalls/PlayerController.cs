@@ -52,13 +52,6 @@ public class PlayerController : MonoBehaviour
         rb.velocity = velocity;
         IfPlayerFall();
     }
-    private void LateUpdate()
-    {
-        mainCamera.transform.position = new Vector3(
-            transform.position.x,
-            transform.position.y + 5f,
-            transform.position.z - 10f);
-    }
     private void IfPlayerFall()
     {
         if (transform.position.y < -30f)
