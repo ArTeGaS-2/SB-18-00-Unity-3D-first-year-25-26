@@ -16,6 +16,4 @@ public class Projectile : MonoBehaviour
 
         transform.LookAt(targetObj.transform);
     }
-
-
 }
