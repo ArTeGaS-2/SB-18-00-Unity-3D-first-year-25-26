@@ -8,7 +8,7 @@ public class AgentMove : MonoBehaviour
     // назва об'єкта, до якого буде рухатися агент
     [SerializeField] string targetName = "EnemyTarget";
     // максимальний рівень здоров'я агента
-    [SerializeField] float maxHp = 20f;
+    [SerializeField] float maxHp = 20f; 
 
     // Посилання на NavMeshAgent для керування рухом агента
     private NavMeshAgent agent;

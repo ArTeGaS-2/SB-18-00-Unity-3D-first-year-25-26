@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     public GameObject targetObj; // ціль кулі
     [SerializeField] private float projectileSpeed = 10f;
-
+    
     private void FixedUpdate()
     {
         transform.position = Vector3.MoveTowards(
@@ -14,6 +14,6 @@ public class Projectile : MonoBehaviour
             targetObj.transform.position,
             projectileSpeed * Time.fixedDeltaTime);
 
-        transform.LookAt(targetObj.transform);
+        transform.LookAt(targetObj.transform); 
     }
 }

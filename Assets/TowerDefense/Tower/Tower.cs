@@ -9,7 +9,7 @@ public class Tower : MonoBehaviour
     [SerializeField] GameObject spawnPoint;
     [SerializeField] float attackInterval;
 
-    [Header("Інше")]
+    [Header("Інше")] 
     [HideInInspector] public List<GameObject> enemiesList;
 
     private void Start()
