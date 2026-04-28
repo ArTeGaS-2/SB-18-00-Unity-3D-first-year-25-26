@@ -423,6 +423,7 @@ GameObject:
   - component: {fileID: 1037618377}
   - component: {fileID: 1037618376}
   - component: {fileID: 1037618379}
+  - component: {fileID: 1037618380}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -497,13 +498,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037618375}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.3971479, y: 0, z: 0, w: 0.91775465}
+  m_LocalPosition: {x: 0, y: 14.98, z: -28.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 46.8, y: 0, z: 0}
 --- !u!114 &1037618379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,6 +549,24 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1037618380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037618375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2363123165c5b034aa4ea627fd88dae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraSens: 5
+  distanceToGround: 10
+  minDistance: 5
+  maxDistance: 30
+  horizontalBorder: 50
+  verticalBorder: 50
 --- !u!1 &1151691659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,6 +1266,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7322330275588750752, guid: c2f92da39caad4442b678559c20a6aa3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b180ff406f84d04facfcf2491d4619f, type: 2}
     - target: {fileID: 7539878696250575706, guid: c2f92da39caad4442b678559c20a6aa3,
         type: 3}
       propertyPath: m_AnchorMax.x

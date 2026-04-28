@@ -85,6 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 419046060696887414}
   - component: {fileID: 8310198573397330772}
+  - component: {fileID: 6242974960861345877}
   m_Layer: 0
   m_Name: HP_Bar
   m_TagString: Untagged
@@ -164,6 +165,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6242974960861345877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971456487371147002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f04b7e8dc5edac04cb00aef53cbe7aa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4583588348217635844
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +353,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 7b180ff406f84d04facfcf2491d4619f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

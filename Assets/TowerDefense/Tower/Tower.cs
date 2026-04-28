@@ -8,7 +8,7 @@ public class Tower : MonoBehaviour
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] GameObject spawnPoint;
     [SerializeField] float attackInterval;
-
+     
     [Header("Інше")] 
     [HideInInspector] public List<GameObject> enemiesList;
 
