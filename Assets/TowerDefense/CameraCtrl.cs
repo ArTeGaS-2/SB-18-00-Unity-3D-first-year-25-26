@@ -23,5 +23,12 @@ public class CameraCtrl : MonoBehaviour
             transform.position.x + horizontal * cameraSens * Time.deltaTime,
             transform.position.y,
             transform.position.z + vertical * cameraSens * Time.deltaTime);
+        cameraZoom();
+    }
+    public void cameraZoom()
+    {
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        Camera.main.fieldOfView -= scroll * cameraSens * 100f * Time.deltaTime;
+        Debug.Log(Input.mouseScrollDelta.y);
     }
 }
