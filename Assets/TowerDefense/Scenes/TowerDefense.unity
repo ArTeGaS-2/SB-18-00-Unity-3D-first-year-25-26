@@ -561,12 +561,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2363123165c5b034aa4ea627fd88dae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraSens: 5
-  distanceToGround: 10
-  minDistance: 5
-  maxDistance: 30
-  horizontalBorder: 50
-  verticalBorder: 50
+  cameraSens: 10
+  zoomSens: 10
+  minZoomDistance: 5
+  maxZoomDistance: 30
+  horizontalBorder: 20
+  verticalBorder: 20
 --- !u!1 &1151691659
 GameObject:
   m_ObjectHideFlags: 0
